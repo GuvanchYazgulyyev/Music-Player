@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>M3 Player</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <img src="resimler/logo.jpg" class="logo">
+
+            <ul>
+                <li><a href="#">ANA SAYFA</a></li>
+                <li><a href="#">HAKKIMDA</a></li>
+                <li><a href="#">ÖZELLİKLER</a></li>
+                <li><a href="#">ÜRÜNLER</a></li>
+                <li><a href="#">İÇERİK</a></li>
+            </ul>
+        </div>
+        <div class="conten">
+            <div class="left-col">
+                <h1>GERÇEK <br> SES</h1>
+            </div>
+            <div class="rigt-col">
+                <p> Dinlemek için Buraya Tıklayın</p>
+                <img src="resimler/play.png" alt="" id=icon >
+
+            </div>
+        </div>
+
+    </div>
+
+    <audio id="mysong">
+        <source src="resimler/1.webm" type="audio/webm">
+    </audio>
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon= document.getElementById("icon");
+
+        icon.onclick=function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src="resimler/pause.png";
+            }
+            else{
+                mysong.pause();
+                icon.src="resimler/play.png";
+            }
+        }
+
+    </script>
+</body>
+</html>
